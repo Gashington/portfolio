@@ -1,0 +1,206 @@
+@import '/mixin/mixins'
+@import '/mixin/sprite'
+
+/*Переменные настройки*/
+headerHeight = auto
+footerHeight = 80px
+placeholderColor = #000
+containerWidth = 980px
+webfont('proxima', 'proximanovacond-semibold-webfont', false, 'normal')
+webfont('icomoon', 'icomoon', false, 'normal')
+
+[class^="icon-"]
+[class*=" icon-"]
+  font-family 'icomoon'
+  speak none
+  font-style normal
+  font-weight normal
+  font-variant normal
+  text-transform none
+  line-height 1
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+.icon-courses:before
+  content "\e601"
+
+.icon-education:before
+  content "\e60a"
+
+.icon-fb:before
+  content "\e602"
+
+.icon-gh:before
+  content "\e603"
+
+.icon-mail:before
+  content "\e604"
+
+.icon-phone:before
+  content "\e605"
+
+.icon-skype:before
+  content "\e606"
+
+.icon-tw:before
+  content "\e607"
+
+.icon-vk:before
+  content "\e608"
+
+.icon-work:before
+  content "\e609"
+
+
+*
+  box-sizing border-box
+  inline-box-align align-content
+
+/*placeholder*/
+input
+  placeholder(#fff)
+
+/*сброс стилей для списков*/
+.unstyled
+  margin 0
+  padding 0
+  list-style none
+/*Скрытие текста*/
+.replace-txt
+  text-hide()
+
+.visible
+  opacity 1
+.invisible
+  opacity 0
+
+.s-icon
+  display block
+  background url("../img/bg/sprite.png") no-repeat
+
+.f-left
+  float left
+.f-right
+  float right
+/*Футер к низу страницы*/
+html
+body
+  height 100%
+.wrapper
+  min-height: 100%
+  height auto !important
+  height 100%
+  margin 0 auto - footerHeight
+.footer-push
+  height footerHeight
+.footer
+  height footerHeight
+
+/*Основные стили*/
+body
+  background url("../img/bg/comppattern2.png")
+  font normal 16px 'Fira Sans'
+header
+  padding 28px 0 25px 0
+  background #eff3f7 url("/img/bg/line-bg.png") no-repeat center bottom
+  .header-wrap
+    clearfix()
+    width 100%
+    max-width 1200px
+    margin 0 auto
+.container
+  max-width containerWidth
+  margin 0 auto
+  padding 0 10px
+.page
+  clearfix()
+  padding 39px 0
+.sidebar
+  width 100%
+  max-width 310px
+  padding 0 60px 0 0
+  .sidebar-item-1
+    margin 0 0 25px 0
+.content
+  width 100%
+  max-width 650px
+  padding 0 0 39px 0
+
+.title
+  display inline-block
+  margin 0 0 16px 0
+  padding 20px 21px 25px 25px
+  border-bottom 2px solid #3ba8c0
+  color #3ba8c0
+  font-size 27px
+  font-weight normal
+
+.content-item
+  margin 24px 0 0 0
+  padding 0 0 26px 0
+  overflow hidden
+  border-radius 4px
+  background #eff3f7
+  &:first-child
+    margin 0
+.footer
+  background #eff3f7 url("/img/bg/line-bg.png") no-repeat center top
+  text-align center
+  line-height 81px
+
+.user
+  .user-avatar
+    float left
+    width 246px
+    padding 0 23px
+    img
+      width 200px
+      height 200px
+  .user-info
+    float left
+    width 424px
+    padding 7px 15px
+  .user-info-item
+    margin 15px 0 0 0
+    color #4a545d
+    &:first-child
+      margin 0
+  .user-info-title
+    margin 0 17px 0 0
+    vertical-align top
+    font-size 17px
+    font-weight 500
+  .skills-list
+    display inline-block
+    width 219px
+    line-height 25px
+    word-spacing 8px
+    .skills-item
+      display inline-block
+
+      padding 0 13px
+      border-radius 3px
+      background url("../img/bg/skill-bg.png")
+      color #fff
+      font normal 14px/19px 'proxima'
+
+.places-list
+  padding 16px 20px 8px 64px
+  .places-item
+    position relative
+    margin 28px 0 0 0
+    padding 0 0 0 65px
+    color #4a545d
+    &:firsr-child
+      margin 0
+    .icon
+      position absolute
+      top 0px
+      left 0
+      font-size 34px
+  .place-name
+    font-size 17px
+  .during
+    font-size 15px
+    font-weight 300
