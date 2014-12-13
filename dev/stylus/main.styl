@@ -22,6 +22,12 @@ webfont('icomoon', 'icomoon', false, 'normal')
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+.icon-upload:before
+  content "\e60b"
+
+.icon-add:before
+  content "\e600"
+
 .icon-courses:before
   content "\e601"
 
@@ -58,8 +64,6 @@ webfont('icomoon', 'icomoon', false, 'normal')
   inline-box-align align-content
 
 /*placeholder*/
-input
-  placeholder(#fff)
 
 /*сброс стилей для списков*/
 .unstyled
@@ -149,6 +153,7 @@ header
   text-align center
   line-height 81px
 
+/*данные пользователя*/
 .user
   .user-avatar
     float left
@@ -159,7 +164,7 @@ header
       height 200px
   .user-info
     float left
-    width 424px
+    width 404px
     padding 7px 15px
   .user-info-item
     margin 15px 0 0 0
@@ -173,7 +178,7 @@ header
     font-weight 500
   .skills-list
     display inline-block
-    width 219px
+    width 196px
     line-height 25px
     word-spacing 8px
     .skills-item
@@ -185,6 +190,7 @@ header
       color #fff
       font normal 14px/19px 'proxima'
 
+/*места работы и учёбы*/
 .places-list
   padding 16px 20px 8px 64px
   .places-item
@@ -204,3 +210,99 @@ header
   .during
     font-size 15px
     font-weight 300
+
+/*Страница портфолио*/
+.portfolio-wrap
+  clearfix()
+  height 100%
+  margin 0 0 0 -30px
+  padding 18px 0 0 19px
+  .portfolio-item
+    float left
+    width 183px
+    margin  0 0 44px 30px
+    text-align center
+    .portfolio-img
+      position relative
+      height 129px
+      margin 0 0 11px 0
+      border 2px solid #3ba8c0
+      border-radius 4px
+      overflow hidden
+      img
+        width 100%
+        height 100%
+      .hover-up-1
+      .hover-up-2
+        background-color: rgba(0,0,0,0.5)
+        width 311px
+        height 255px
+        background rgba(119,0,36,0.5)
+        opacity 1
+        transition all 0.3s ease-in-out 0.6s
+      .hover-up-1
+        left auto
+        right 0px
+        transform rotate(55deg) translateX(-290px)
+        transform-origin 100% 0%
+      .hover-up-2
+        top auto
+        bottom 0px
+        transform: rotate(55deg) translateX(290px)
+        transform-origin: 0% 100%
+      .portfolio-name
+        height 0px
+        width 361px
+        opacity 0.5
+        background rgba(0,0,0,0.9)
+        overflow hidden
+        transform: rotate(-33.5deg) translate(-112px,166px)
+        transform-origin 0% 100%
+        transition all 0.4s ease-in-out 0.3s
+      &:hover
+        .portfolio-name
+          height 120px
+          width 300px
+          opacity 0.9
+          top 40px
+          transform: rotate(0deg) translate(0px,0px)
+
+        .hover-up-1
+        .hover-up-2
+          transition-delay 0s
+
+        .hover-up-1
+          transform rotate(55deg) translateX(-181px)
+
+        .hover-up-2
+          transform rotate(55deg) translateX(181px)
+
+    .portfolio-url
+      margin 0 0 14px 0
+      a
+        color #3ba8c0
+        font-size 13px
+        font-weight 300
+        font-style italic
+        text-decoration none
+        &:hover
+          color #3b51c0
+    .portfolio-teaser
+      color #4a545d
+      font-size 15px
+      font-weight 300px
+  .add-project
+    .portfolio-img
+      position relative
+      border none
+      .caption
+        position absolute
+        top 38px
+        left 0
+        width 100%
+        color #3ba8c0
+        font-size 13px
+        font-weight 300
+        text-align center
+        .icon
+          font-size 32px

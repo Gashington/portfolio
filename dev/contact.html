@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,300italic&subset=latin,cyrillic-ext'
+          rel='stylesheet' type='text/css'>
+    <!-- build:cssConfig -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="/css/fancybox.css">
+    <link rel="stylesheet" href="/css/tooltipster.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/widgets.css">
+    <link rel="stylesheet" href="/css/media.css">
+    <!-- endbuild -->
+
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browsehappy">You aкe using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="wrapper">
+    <header class="header">
+        <div class="header-wrap">
+            <div class="header-item-1 f-left">
+                <div class="logo">
+                    <a href="/"><img src="/img/logo.png" alt="LOFTSCHOOL - на главную"/><span class="replace-txt">LOFTSCHOOL комплексное обучение web разработке</span></a>
+
+                </div>
+            </div>
+            <div class="header-item-2 f-right">
+                <ul class="unstyled social-list">
+                    <li class="social-item"><a href=""><i class="icon icon-vk"><span
+                            class="replace-txt">Вконтакте</span></i></a></li>
+                    <li class="social-item"><a href=""><i class="icon icon-tw"><span class="replace-txt">twitter</span></i></a>
+                    </li>
+                    <li class="social-item"><a href=""><i class="icon icon-fb"><span class="replace-txt">facebook</span></i></a>
+                    </li>
+                    <li class="social-item"><a href=""><i class="icon icon-gh"><span
+                            class="replace-txt">github</span></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <main class="page">
+        <div class="container">
+            <aside class="sidebar f-left">
+                <div class="sidebar-item-1">
+                    <nav class="main-nav">
+                        <ul class="unstyled">
+                            <li class="active"><a href="/">Обо мне</a></li>
+                            <li><a href="/portfolio.html">Мои работы</a></li>
+                            <li><a href="/contact.html">Связаться со мной</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sidebar-item-2">
+                    <div class="w-contact">
+                        <h3 class="w-contact-title lg-blue">Контакты</h3>
+
+                        <div class="w-contact-item h-blue">
+                            <a href="mailto://pochta@mail.ru"><i class="icon icon-mail"></i><span>pochta@mail.ru</span></a>
+                        </div>
+                        <div class="w-contact-item m-blue">
+                            <a href="tel://+79812342323"><i class="icon icon-phone"></i><span>+79812342323</span></a>
+                        </div>
+                        <div class="w-contact-item s-blue">
+                            <a href="skype:echo123?call"><i class="icon icon-skype"></i><span>nickname</span></a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section class="content f-left">
+                <div class="content-item">
+                    <div id="contact-form">
+
+                        <form id="validate-form2" action="#">
+                            <h3 class="form-legend">У вас интересный проект? Напишите мне</h3>
+
+                            <div class="form-group">
+                                <div class="inline left">
+                                    <label for="name">Название проекта</label>
+                                    <input id="name" name="name" type="text" placeholder="Как к Вам обращаться">
+                                </div>
+                                <div class="inline right">
+                                    <label for="email">Картинка проекта</label>
+                                    <input id="email" name="email" type="text" placeholder="Куда мне писать">
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="desc">Сообщение</label>
+                                <textarea id="desc" placeholder="Кратко в чем суть"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="captcha-code">Введите код, указанный на картинке</label>
+
+                                <div class="captcha-img"><img src="/img/captcha.png" alt="captcha"/></div>
+                                <input id="captcha-code" name="captcha" type="text" placeholder="Введите код">
+                            </div>
+
+                            <div class="form-group">
+                                <input class="btn blue-btn" type="submit" name="submit" value="Добавить">
+                                <input class="btn gray-btn" type="submit" name="submit" value="Очистить">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <div class="footer-push"></div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <span class="copyrgt">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</span>
+    </div>
+</footer>
+<!-- build:jsConfig -->
+<script src="/js/vendor/jquery-1.11.1.js"></script>
+<script src="/js/vendor/fancybox.js"></script>
+<script src="/js/vendor/jquery.formstyler.js"></script>
+<script src="/js/vendor/jquery.validate.js"></script>
+<script src="/js/vendor/jquery.tooltipster.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/main.js"></script>
+<!-- endbuild -->
+<script src="/js/vendor/respond.js"></script>
+
+</body>
+</html>

@@ -87,3 +87,193 @@
     height 39px
     background #51daf8
     line-height 37px
+
+/*Стили для всех форм*/
+.btn
+  display block
+  width 139px!important
+  height 33px!important
+  margin 0 auto
+  padding 4px 0 0 0
+  border-radius 4px
+  color #ffffff
+  font-size 19px
+
+  &.blue-btn
+    background #48cbe8
+    border-bottom 4px solid #3ba8c0
+    &:hover
+      padding 4px 0 4px 0
+      border none
+    &:active
+      padding 0 0 4px 0
+      border-top 4px solid #3ba8c0
+  &.gray-btn
+    background #849db5!important
+    border-bottom 4px solid #687b8f
+    &:active
+      border-top 4px solid #687b8f
+    &:hover
+      padding 4px 0 4px 0
+      border none
+    &:active
+      padding 0 0 4px 0
+      border-top 4px solid #3ba8c0
+
+form
+  overflow hidden
+  border-radius 4px
+  background #eff3f7
+  .form-legend
+    background #48cbe8
+    text-align center
+    color #ffffff
+    font-weight 400
+  .form-group
+    margin 0 0 11px 0
+  label
+    display block
+    margin 0 0 7px 0
+    color #959aa8
+    font-weight 300
+  input
+    placeholder(#48cbe8)
+  input
+  textarea
+    width 100%
+    border 1px solid #48cbe8
+    border-radius 4px
+    background white
+    color #48cbe8
+    resize none
+    &:focus
+      outline none
+    &.error
+      border 1px solid #f97e76
+      background transparent url("../img/bg/red-transparent-bg.png")
+  textarea
+    &::-webkit-input-placeholder
+      color #48cbe8 !important
+    &::-moz-placeholder
+      color #48cbe8 !important
+    &:-moz-placeholder
+      color #48cbe8 !important
+    &:-ms-input-placeholder
+      color #48cbe8 !important
+
+
+
+#add-project-form
+  display none
+  width 362px
+  .form-legend
+    margin 0 0 15px 0
+    border-bottom 9px solid #67dffa
+    font-size 25px
+    line-height 44px
+  .form-group
+    padding 0 21px
+    &.btn
+      text-align center
+  input
+    width 100%
+    height 41px
+    padding 0 9px
+    font 300 13px 'Fira Sans'
+  textarea
+    padding 13px 8px
+    height 111px
+    color #48cbe8
+    font 300 13px 'Fira Sans'
+  .jq-file
+    width 100%
+    box-shadow none
+    &.error
+      .jq-file__name
+        border 1px solid #f97e76
+        background transparent url("../img/bg/red-transparent-bg.png")
+  .jq-file__name
+    height 41px
+    border 1px solid #48cbe8
+    box-shadow none
+    overflow hidden
+    color #48cbe8
+    font 300 13px 'Fira Sans'
+    line-height 41px
+  .jq-file__browse
+    top 0px
+    right 0px
+    width 52px
+    height 42px
+    border none
+    background #48cbe8
+    border none
+    box-shadow none
+    color white
+    font-size 24px
+    text-align center
+    text-shadow none
+    line-height 41px!important
+    font-family 'icomoon'
+    speak none
+    font-style normal
+    font-weight normal
+    font-variant normal
+    text-transform none
+    line-height 1
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &:before
+      content "\e60b"
+
+/* сТИЛИЗАЦИЯ тултипов*/
+.tooltipster-default
+  border 2px solid #f97e76
+  background #f97e76
+  color #fff
+
+#contact-form
+  .form-legend
+    margin 0 0 48px 0
+    border-bottom 17px solid #67dffa
+    font-size 27px
+    line-height 121px
+  .form-group
+    clearfix()
+    margin 0 0 16px 0
+    padding 0 124px 0 123px
+    .inline
+      width 192px
+      &.left
+        float left
+      &.right
+        float right
+  label
+    font-size 19px
+  input
+    width 100%
+    height 41px
+    padding 0 9px
+    font 300 13px 'Fira Sans'
+  textarea
+    padding 13px 8px
+    height 181px
+    color #48cbe8
+    font 300 13px 'Fira Sans'
+  .captcha-img
+    float left
+    width 191px
+    height 79px
+    border 1px solid #48cbe8
+    border-radius 4px
+    background white
+    text-align center
+    line-height 79px
+    img
+      display inline-block
+      vertical-align middle
+  #captcha-code
+    float right
+    width 192px
+    height 32px

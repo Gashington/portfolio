@@ -7,17 +7,23 @@ var gulp = require('gulp'),
     spritesmith  = require('gulp.spritesmith'),
     minifyCSS = require('gulp-minify-css'),
     htmlreplace = require('gulp-html-replace'),
-    nib = require('nib'),
+    autoprefixer = require('gulp-autoprefixer'),
     rename = require("gulp-rename"),
     watch = require('gulp-watch'),
     jsArr = [
         '/js/vendor/jquery-1.11.1.js',
         '/js/vendor/fancybox.js',
+        '/js/vendor/jquery.formstyler.js',
+        '/js/vendor/jquery.validate.js',
+        '/js/vendor/jquery.tooltipster.js',
         '/js/plugins.js',
         '/js/main.js',
     ],
     cssArr = [
         '/css/normalize.css',
+        '/css/jquery.formstyler.css',
+        '/css/fancybox.css',
+        '/css/tooltipster.css',
         '/css/main.css',
         '/css/widgets.css',
         '/css/media.css',
@@ -37,14 +43,11 @@ gulp.task('default', function () {
 
 // конфигурация html
 gulp.task('htmlconfig', function() {
-    gulp.src('./dev/index.html')
+    gulp.src('./dev/*.html')
         .pipe(htmlreplace({
             'cssConfig': cssArr,
             'jsConfig': jsArr
         },{keepBlockTags: true}))
-        .pipe(rename({
-            basename: "index",
-        }))
         .pipe(gulp.dest('./dev'));
 });
 // запуск сервера
@@ -87,7 +90,8 @@ gulp.task('watch', function () {
     // компиляция stylus
     gulp.task('stylus', function () {
         gulp.src(['./dev/stylus/*.styl', '!dev/stylus/mixin/*.styl'])
-            .pipe(stylus({use: [nib()]}))
+            .pipe(stylus())
+            .pipe(autoprefixer())
             .pipe(gulp.dest('./dev/css'))
     });
 
@@ -117,50 +121,69 @@ gulp.task('build', function () {
         'build-css',
         'build-js',
         'img-min',
-        //'copy-source',
+        'app-server',
+        'copy-source',
+
     ]);
 });
 
-    gulp.task('build-html', function() {
-        gulp.src('./dev/index.html')
-            .pipe(htmlreplace({
-                'cssConfig': 'build.min.css',
-                'jsConfig': 'build.min.js'
-            }))
-            .pipe(rename({
-                basename: "index",
-            }))
-            .pipe(gulp.dest('./app'));
-    });
+gulp.task('build-html', function() {
+    gulp.src('./dev/*.html')
+        .pipe(htmlreplace({
+            'cssConfig': '/css/build.min.css',
+            'jsConfig': '/js/build.min.js'
+        }))
+        //.pipe(rename({
+        //    basename: "index",
+        //}))
+        .pipe(gulp.dest('./app'));
+});
 
-    // сборка js
-    gulp.task('build-js', function() {
-        gulp.src(jsArr)
-            .pipe(concat('build.min.js'))
-            .pipe(uglify())
-            .pipe(gulp.dest('app/js'));
-    });
+// сборка js
+gulp.task('build-js', function() {
+    var newJsArr = []
+    for (var i = 0; i<jsArr.length; i++) {
+        newJsArr.push('./dev'+jsArr[i])
+        console.log(newJsArr[i]);
+    }
+    gulp.src(newJsArr)
+        .pipe(concat('build.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./app/js'));
+});
 
-    // сборка css
-    gulp.task('build-css', function() {
-        gulp.src(cssArr)
-            .pipe(concat('build.min.css'))
-            .pipe(minifyCSS())
-            .pipe(gulp.dest('app/css'));
-    });
+// сборка css
+gulp.task('build-css', function() {
+    var newCssArr = []
+    for (var i = 0; i<cssArr.length; i++) {
+        newCssArr.push('./dev'+cssArr[i])
+        console.log(newCssArr[i]);
+    }
+    gulp.src(newCssArr)
+        .pipe(concat('build.min.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('./app/css'));
+});
 
-    // оптимизация изображений
-    gulp.task('img-min', function () {
-        gulp.src('./dev/img/**/*.{png,jpg,gif}')
-            .pipe(imagemin())
-            .pipe(gulp.dest('./app/img'))
-    });
-
-    // копирование *.html в папку проекта
-    //gulp.task('copy-source', function () {
-    //    gulp.src(['./dev/**/*.*','!./dev/img/**/*.*'], { base: './dev' })
-    //        .pipe(gulp.dest('./app'))
-    //});
+// оптимизация изображений
+gulp.task('img-min', function () {
+    gulp.src('./dev/img/**/*.{png,jpg,gif}')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./app/img'))
+});
+gulp.task('app-server', function(){
+    connect.server({
+        root: ['./app'],
+        port: 3001,
+        keepalive: true,
+        livereload: true
+    })
+});
+// копирование *.html в папку проекта
+gulp.task('copy-source', function () {
+    gulp.src(['./dev/**/*.*','!./dev/img/**/*.*'], { base: './dev' })
+        .pipe(gulp.dest('./app'))
+});
 
 
 
