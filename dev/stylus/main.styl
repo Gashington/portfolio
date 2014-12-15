@@ -58,10 +58,8 @@ webfont('icomoon', 'icomoon', false, 'normal')
 .icon-work:before
   content "\e609"
 
-
 *
   box-sizing border-box
-  inline-box-align align-content
 
 /*placeholder*/
 
@@ -222,87 +220,87 @@ header
   height 100%
   margin 0 0 0 -30px
   padding 18px 0 0 19px
-  .portfolio-item
-    float left
-    width 183px
-    margin  0 0 42px 30px
-    text-align center
-    .with-hover
-      position relative
-      height 129px
-      margin 0 0 6px 0
-      border 2px solid #3ba8c0
+.portfolio-item
+  float left
+  width 183px
+  margin  0 0 42px 30px
+  text-align center
+  .with-hover
+    position relative
+    height 129px
+    margin 0 0 6px 0
+    border 2px solid #3ba8c0
+    border-radius 4px
+    overflow hidden
+    cursor pointer
+    img
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      transition: all 0.2s linear;
+    .hover-up
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      opacity 0
+      background-color rgba(1,108,164,.75)
+      transition all 0.4s ease-in-out
+      line-height 144px
+    .portfolio-name
+      display inline-block
+      padding 2px 3px
+      opacity 0
+      border 2px solid #ffffff
       border-radius 4px
+      transition all 0.2s ease-in-out
       overflow hidden
-      cursor pointer
-      img
-        position absolute
-        top 0
-        left 0
-        width 100%
-        height 100%
-        transition: all 0.2s linear;
+      color #ffffff
+      font-size 12px
+      line-height normal
+      text-transform lowercase
+    &:hover
       .hover-up
-        position absolute
-        top 0
-        left 0
-        width 100%
-        height 100%
-        opacity 0
-        background-color rgba(1,108,164,.75)
-        transition all 0.4s ease-in-out
-        line-height 144px
+        opacity 1
       .portfolio-name
-        display inline-block
-        padding 2px 3px
-        opacity 0
-        border 2px solid #ffffff
-        border-radius 4px
-        transition all 0.2s ease-in-out
-        overflow hidden
-        color #ffffff
-        font-size 12px
-        line-height normal
-        text-transform lowercase
-      &:hover
-        .hover-up
-          opacity 1
-        .portfolio-name
-          opacity 1
-          transform translateY(0px)
-        img
-          transform scale(1.1)
+        opacity 1
+        transform translateY(0px)
+      img
+        transform scale(1.1)
 
-    .portfolio-url
-      margin 0 0 9px 0
-      a
-        color #3ba8c0
-        font-size 13px
-        font-weight 300
-        font-style italic
-        text-decoration none
-        &:hover
-          color #3b51c0
-    .portfolio-teaser
-      padding 0 5px
-      color #4a545d
-      font-size 15px
+  .portfolio-url
+    margin 0 0 9px 0
+    a
+      color #3ba8c0
+      font-size 13px
       font-weight 300
+      font-style italic
+      text-decoration none
+      &:hover
+        color #3b51c0
+  .portfolio-teaser
+    padding 0 5px
+    color #4a545d
+    font-size 15px
+    font-weight 300
 
-  .add-project
-    .portfolio-img
-      position relative
-      border none
-      .caption
-        position absolute
-        top 35px
-        left 0
-        width 100%
-        color #3ba8c0
-        font-size 13px
-        font-weight 300
-        text-align center
-        .icon
-          display inline-block
-          margin-bottom 13px
-          font-size 32px
+.add-project
+  .portfolio-img
+    position relative
+    border none
+  .caption
+    position absolute
+    top 35px
+    left 0
+    width 100%
+    color #3ba8c0
+    font-size 13px
+    font-weight 300
+    text-align center
+  .icon
+    display inline-block
+    margin-bottom 13px
+    font-size 32px

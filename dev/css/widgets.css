@@ -1,6 +1,14 @@
 .social-list {
   padding: 6px 0 0 0;
 }
+.social-list:before,
+.social-list:after {
+  content: " ";
+  display: table;
+}
+.social-list:after {
+  clear: both;
+}
 .social-list .social-item {
   float: left;
   margin: 0 0 0 24px;
