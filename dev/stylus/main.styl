@@ -5,7 +5,7 @@
 headerHeight = auto
 footerHeight = 80px
 placeholderColor = #000
-containerWidth = 980px
+containerWidth = 1030px
 webfont('proxima', 'proximanovacond-semibold-webfont', false, 'normal')
 webfont('icomoon', 'icomoon', false, 'normal')
 
@@ -104,17 +104,19 @@ body
   background url("../img/bg/comppattern2.png")
   font normal 16px 'Fira Sans'
 header
-  padding 28px 0 25px 0
+  padding 28px 35px 25px
   background #eff3f7 url("/img/bg/line-bg.png") no-repeat center bottom
   .header-wrap
+    position relative
     clearfix()
     width 100%
-    max-width 1200px
+    max-width 1220px
     margin 0 auto
 .container
+  clearfix()
   max-width containerWidth
   margin 0 auto
-  padding 0 10px
+  padding 0 35px
 .page
   clearfix()
   padding 39px 0
@@ -127,6 +129,7 @@ header
 .content
   width 100%
   max-width 650px
+  margin 0 auto
   padding 0 0 39px 0
 
 .title
@@ -139,7 +142,8 @@ header
   font-weight normal
 
 .content-item
-  margin 24px 0 0 0
+  width 100%
+  margin 24px auto
   padding 0 0 13px 0
   overflow hidden
   border-radius 4px
@@ -158,14 +162,16 @@ header
 .user
   .user-avatar
     float left
-    width 245px
+    width 100%
+    max-width 245px
     padding 0 21px
     img
       width 200px
       height 200px
   .user-info
     float left
-    width 404px
+    width 100%
+    max-width 404px
     padding 7px 15px
   .user-info-item
     margin 20px 0 0 0
@@ -179,7 +185,7 @@ header
     font-weight 500
   .skills-list
     display inline-block
-    width 196px
+    max-width 196px
     word-spacing 3px
     .skills-item
       display inline-block

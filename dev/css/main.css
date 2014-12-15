@@ -119,12 +119,13 @@ body {
   font: normal 16px 'Fira Sans';
 }
 header {
-  padding: 28px 0 25px 0;
+  padding: 28px 35px 25px;
   background: #eff3f7 url("/img/bg/line-bg.png") no-repeat center bottom;
 }
 header .header-wrap {
+  position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
 }
 header .header-wrap:before,
@@ -136,9 +137,17 @@ header .header-wrap:after {
   clear: both;
 }
 .container {
-  max-width: 980px;
+  max-width: 1030px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 35px;
+}
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear: both;
 }
 .page {
   padding: 39px 0;
@@ -162,6 +171,7 @@ header .header-wrap:after {
 .content {
   width: 100%;
   max-width: 650px;
+  margin: 0 auto;
   padding: 0 0 39px 0;
 }
 .title {
@@ -174,7 +184,8 @@ header .header-wrap:after {
   font-weight: normal;
 }
 .content-item {
-  margin: 24px 0 0 0;
+  width: 100%;
+  margin: 24px auto;
   padding: 0 0 13px 0;
   overflow: hidden;
   border-radius: 4px;
@@ -196,7 +207,8 @@ header .header-wrap:after {
 /*данные пользователя*/
 .user .user-avatar {
   float: left;
-  width: 245px;
+  width: 100%;
+  max-width: 245px;
   padding: 0 21px;
 }
 .user .user-avatar img {
@@ -205,7 +217,8 @@ header .header-wrap:after {
 }
 .user .user-info {
   float: left;
-  width: 404px;
+  width: 100%;
+  max-width: 404px;
   padding: 7px 15px;
 }
 .user .user-info-item {
@@ -223,7 +236,7 @@ header .header-wrap:after {
 }
 .user .skills-list {
   display: inline-block;
-  width: 196px;
+  max-width: 196px;
   word-spacing: 3px;
 }
 .user .skills-list .skills-item {

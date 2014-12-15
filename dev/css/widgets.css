@@ -1,5 +1,25 @@
+/* flex menu btn*/
+.menu-button {
+  position: absolute;
+  right: 35px;
+  top: 10px;
+  display: none;
+  width: 25px;
+  cursor: pointer;
+}
+.menu-button .line {
+  height: 4px;
+  margin: 3px 0 0 0;
+  border-radius: 4px;
+  background: #58697a;
+}
+.menu-button .line:first-child {
+  margin: 0;
+}
 .social-list {
   padding: 6px 0 0 0;
+  text-align: center;
+  word-spacing: 0px;
 }
 .social-list:before,
 .social-list:after {
@@ -10,7 +30,7 @@
   clear: both;
 }
 .social-list .social-item {
-  float: left;
+  display: inline-block;
   margin: 0 0 0 24px;
 }
 .social-list .social-item a {
@@ -21,9 +41,12 @@
 .social-list .social-item a:hover {
   color: #3ba8c0;
 }
-.main-nav {
-  border-radius: 4px;
+.social-list .social-item:first-child {
+  margin: 0;
+}
+.main-nav ul {
   background: #eff3f7;
+  border-radius: 4px;
   overflow: hidden;
 }
 .main-nav li {

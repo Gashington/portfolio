@@ -1,11 +1,27 @@
 @import '/mixin/mixins'
 @import '/mixin/sprite'
-
+/* flex menu btn*/
+.menu-button
+  position absolute
+  right 35px
+  top 10px
+  display none
+  width 25px
+  cursor pointer
+  .line
+    height 4px
+    margin 3px 0 0 0
+    border-radius 4px
+    background #58697a
+    &:first-child
+      margin 0
 .social-list
   clearfix()
   padding 6px 0 0 0
+  text-align center
+  word-spacing 0px
   .social-item
-    float left
+    display inline-block
     margin 0 0 0 24px
     a
       color #58697a
@@ -13,11 +29,14 @@
       text-decoration none
       &:hover
         color #3ba8c0
+    &:first-child
+      margin 0
 
 .main-nav
-  border-radius 4px
-  background #eff3f7
-  overflow hidden
+  ul
+    background #eff3f7
+    border-radius 4px
+    overflow hidden
   li
     margin -2px 0 0 0
     padding 0 10px
