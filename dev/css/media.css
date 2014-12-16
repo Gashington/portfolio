@@ -24,6 +24,9 @@
         border-right: 16px solid transparent;
         border-bottom: 16px solid #3ba8c0;
     }
+    .w-contact {
+
+    }
     .w-contact .w-contact-title {
         display: none;
     }
@@ -88,6 +91,19 @@
     .user .user-info {
         float: none;
         margin: 0 auto;
+    }
+    #contact-form .form-group {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    #contact-form .form-group-left,
+    #contact-form .form-group-right {
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+    #contact-form .input-text {
+        width: 100%;
     }
 
 

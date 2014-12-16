@@ -31,7 +31,7 @@
 }
 .social-list .social-item {
   display: inline-block;
-  margin: 0 0 0 24px;
+  margin: 0 0 0 19px;
 }
 .social-list .social-item a {
   color: #58697a;
@@ -73,6 +73,14 @@
 }
 .w-contact {
   border-radius: 4px;
+}
+.w-contact:before,
+.w-contact:after {
+  content: " ";
+  display: table;
+}
+.w-contact:after {
+  clear: both;
 }
 .w-contact .w-contact-item {
   padding: 0 0 0 41px;
@@ -135,10 +143,9 @@
 }
 /*Стили для всех форм*/
 .btn {
-  display: block;
+  display: inline-block;
   width: 139px !important;
   height: 33px !important;
-  margin: 0 auto;
   padding: 4px 0 0 0;
   border-top: none;
   border-right: none;
@@ -186,52 +193,52 @@ form .form-legend {
 form .form-group {
   margin: 0 0 11px 0;
 }
-form label {
+form .input-label {
   display: block;
   margin: 0 0 7px 0;
   color: #959aa8;
   font-weight: 300;
 }
-form input::-webkit-input-placeholder {
+form .input-text::-webkit-input-placeholder {
   color: #48cbe8 !important;
   text-indent: 0px;
   -webkit-transition: text-indent 0.3s ease;
           transition: text-indent 0.3s ease;
 }
-form input::-moz-placeholder {
+form .input-text::-moz-placeholder {
   color: #48cbe8 !important;
   text-indent: 0px;
   transition: text-indent 0.3s ease;
 }
-form input:-moz-placeholder {
+form .input-text:-moz-placeholder {
   color: #48cbe8 !important;
   text-indent: 0px;
   transition: text-indent 0.3s ease;
 }
-form input:-ms-input-placeholder {
+form .input-text:-ms-input-placeholder {
   color: #48cbe8 !important;
   text-indent: 0px;
   transition: text-indent 0.3s ease;
 }
-form input:focus::-webkit-input-placeholder {
+form .input-text:focus::-webkit-input-placeholder {
   text-indent: 500px;
   -webkit-transition: text-indent 0.3s ease;
           transition: text-indent 0.3s ease;
 }
-form input:focus::-moz-placeholder {
+form .input-text:focus::-moz-placeholder {
   text-indent: 500px;
   transition: text-indent 0.3s ease;
 }
-form input:focus:-moz-placeholder {
+form .input-text:focus:-moz-placeholder {
   text-indent: 500px;
   transition: text-indent 0.3s ease;
 }
-form input:focus:-ms-input-placeholder {
+form .input-text:focus:-ms-input-placeholder {
   text-indent: 500px;
   transition: text-indent 0.3s ease;
 }
-form input,
-form textarea {
+form .input-text,
+form .textarea {
   width: 100%;
   border: 1px solid #48cbe8;
   border-radius: 4px;
@@ -239,25 +246,25 @@ form textarea {
   color: #48cbe8;
   resize: none;
 }
-form input:focus,
-form textarea:focus {
+form .input-text:focus,
+form .textarea:focus {
   outline: none;
 }
-form input.error,
-form textarea.error {
+form .input-text.error,
+form .textarea.error {
   border: 1px solid #f97e76;
   background: transparent url("../img/bg/red-transparent-bg.png");
 }
-form textarea::-webkit-input-placeholder {
+form .textarea::-webkit-input-placeholder {
   color: #48cbe8 !important;
 }
-form textarea::-moz-placeholder {
+form .textarea::-moz-placeholder {
   color: #48cbe8 !important;
 }
-form textarea:-moz-placeholder {
+form .textarea:-moz-placeholder {
   color: #48cbe8 !important;
 }
-form textarea:-ms-input-placeholder {
+form .textarea:-ms-input-placeholder {
   color: #48cbe8 !important;
 }
 #add-project-form {
@@ -269,21 +276,19 @@ form textarea:-ms-input-placeholder {
   padding: 0 0 0 10px;
   border-bottom: 9px solid #67dffa;
   font-size: 25px;
+  font-weight: 400;
   line-height: 44px;
 }
 #add-project-form .form-group {
   padding: 0 21px;
 }
-#add-project-form .form-group.btn {
-  text-align: center;
-}
-#add-project-form input {
+#add-project-form .input-text {
   width: 100%;
   height: 41px;
   padding: 0 9px;
   font: 300 13px 'Fira Sans';
 }
-#add-project-form textarea {
+#add-project-form .textarea {
   padding: 13px 8px;
   height: 111px;
   color: #48cbe8;
@@ -340,15 +345,18 @@ form textarea:-ms-input-placeholder {
   background: #f97e76;
   color: #fff;
 }
+#contact-form {
+  padding: 0 0 30px 0;
+}
 #contact-form .form-legend {
-  margin: 0 0 48px 0;
+  margin: 0 0 45px 0;
+  padding: 47px 0 42px 0;
   border-bottom: 17px solid #67dffa;
   font-size: 27px;
   text-align: center;
-  line-height: 121px;
 }
 #contact-form .form-group {
-  margin: 0 0 16px 0;
+  margin: 0 0 13px 0;
   padding: 0 124px 0 123px;
 }
 #contact-form .form-group:before,
@@ -359,27 +367,36 @@ form textarea:-ms-input-placeholder {
 #contact-form .form-group:after {
   clear: both;
 }
-#contact-form .form-group .inline {
+#contact-form .form-group.captcha .input-label {
+  font-size: 17px;
+}
+#contact-form .btn-group {
+  padding-top: 19px;
+}
+#contact-form .form-group-left,
+#contact-form .form-group-right {
   width: 192px;
 }
-#contact-form .form-group .inline.left {
+#contact-form .form-group-left {
   float: left;
+  text-align: left;
 }
-#contact-form .form-group .inline.right {
+#contact-form .form-group-right {
   float: right;
+  text-align: right;
 }
-#contact-form label {
+#contact-form .input-label {
+  margin: 0 0 2px 0;
   font-size: 19px;
 }
-#contact-form input {
-  width: 100%;
+#contact-form .input-text {
   height: 41px;
   padding: 0 9px;
   font: 300 13px 'Fira Sans';
 }
-#contact-form textarea {
+#contact-form .textarea {
   padding: 13px 8px;
-  height: 181px;
+  height: 183px;
   color: #48cbe8;
   font: 300 13px 'Fira Sans';
 }
@@ -401,4 +418,5 @@ form textarea:-ms-input-placeholder {
   float: right;
   width: 192px;
   height: 32px;
+  margin: 20px 0 0 0;
 }

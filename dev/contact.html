@@ -97,33 +97,33 @@
                             <h3 class="form-legend">У вас интересный проект? Напишите мне</h3>
 
                             <div class="form-group">
-                                <div class="inline left">
-                                    <label for="name">Название проекта</label>
-                                    <input id="name" name="name" type="text" placeholder="Как к Вам обращаться">
+                                <div class="form-group-left">
+                                    <label class="input-label" for="name">Имя</label>
+                                    <input id="name" class="input-text" name="name" type="text" placeholder="Как к Вам обращаться">
                                 </div>
-                                <div class="inline right">
-                                    <label for="email">Картинка проекта</label>
-                                    <input id="email" name="email" type="text" placeholder="Куда мне писать">
+                                <div class="form-group-right">
+                                    <label class="input-label" for="email">Email</label>
+                                    <input id="email" class="input-text" name="email" type="text" placeholder="Куда мне писать">
                                 </div>
 
                             </div>
                             <div class="form-group">
-                                <label for="desc">Сообщение</label>
-                                <textarea id="desc" placeholder="Кратко в чем суть"></textarea>
+                                <label class="input-label" for="desc">Сообщение</label>
+                                <textarea id="desc" class="textarea" placeholder="Кратко в чем суть"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="captcha-code">Введите код, указанный на картинке</label>
+                            <div class="form-group captcha">
+                                <label class="input-label" for="captcha-code">Введите код, указанный на картинке</label>
 
                                 <div class="captcha-img"><img src="/img/captcha.png" alt="captcha"/></div>
-                                <input id="captcha-code" name="captcha" type="text" placeholder="Введите код">
+                                <input id="captcha-code" class="input-text" name="captcha" type="text" placeholder="Введите код">
                             </div>
 
-                            <div class="form-group">
-                                <div class="inline left">
-                                    <input class="btn blue-btn" type="submit" name="submit" value="Добавить">
+                            <div class="form-group btn-group">
+                                <div class="form-group-left">
+                                    <input class="btn blue-btn input-submit" type="submit" name="submit" value="отправить">
                                 </div>
-                                <div class="inline right">
-                                    <input class="btn gray-btn" type="submit" name="submit" value="Очистить">
+                                <div class="form-group-right">
+                                    <input class="btn gray-btn input-submit" type="submit" name="submit" value="Очистить">
                                 </div>
 
 

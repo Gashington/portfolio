@@ -22,7 +22,7 @@
   word-spacing 0px
   .social-item
     display inline-block
-    margin 0 0 0 24px
+    margin 0 0 0 19px
     a
       color #58697a
       font-size 47px
@@ -56,6 +56,7 @@
         color #fff
 
 .w-contact
+  clearfix()
   border-radius 4px
   .w-contact-item
     padding 0 0 0 41px
@@ -109,10 +110,9 @@
 
 /*Стили для всех форм*/
 .btn
-  display block
+  display inline-block
   width 139px!important
   height 33px!important
-  margin 0 auto
   padding 4px 0 0 0
   border-top none
   border-right none
@@ -152,15 +152,15 @@ form
     font-weight 400
   .form-group
     margin 0 0 11px 0
-  label
+  .input-label
     display block
     margin 0 0 7px 0
     color #959aa8
     font-weight 300
-  input
+  .input-text
     placeholder(#48cbe8)
-  input
-  textarea
+  .input-text
+  .textarea
     width 100%
     border 1px solid #48cbe8
     border-radius 4px
@@ -172,7 +172,7 @@ form
     &.error
       border 1px solid #f97e76
       background transparent url("../img/bg/red-transparent-bg.png")
-  textarea
+  .textarea
     &::-webkit-input-placeholder
       color #48cbe8 !important
     &::-moz-placeholder
@@ -192,17 +192,16 @@ form
     padding 0 0 0 10px
     border-bottom 9px solid #67dffa
     font-size 25px
+    font-weight 400
     line-height 44px
   .form-group
     padding 0 21px
-    &.btn
-      text-align center
-  input
+  .input-text
     width 100%
     height 41px
     padding 0 9px
     font 300 13px 'Fira Sans'
-  textarea
+  .textarea
     padding 13px 8px
     height 111px
     color #48cbe8
@@ -256,32 +255,41 @@ form
   color #fff
 
 #contact-form
+  padding 0 0 30px 0
   .form-legend
-    margin 0 0 48px 0
+    margin 0 0 45px 0
+    padding 47px 0 42px 0
     border-bottom 17px solid #67dffa
     font-size 27px
     text-align center
-    line-height 121px
   .form-group
     clearfix()
-    margin 0 0 16px 0
+    margin 0 0 13px 0
     padding 0 124px 0 123px
-    .inline
-      width 192px
-      &.left
-        float left
-      &.right
-        float right
-  label
+    &.captcha
+      .input-label
+        font-size 17px
+  .btn-group
+    padding-top 19px
+  .form-group-left
+  .form-group-right
+    width 192px
+  .form-group-left
+    float left
+    text-align left
+  .form-group-right
+    float right
+    text-align right
+  .input-label
+    margin 0 0 2px 0
     font-size 19px
-  input
-    width 100%
+  .input-text
     height 41px
     padding 0 9px
     font 300 13px 'Fira Sans'
-  textarea
+  .textarea
     padding 13px 8px
-    height 181px
+    height 183px
     color #48cbe8
     font 300 13px 'Fira Sans'
   .captcha-img
@@ -300,3 +308,4 @@ form
     float right
     width 192px
     height 32px
+    margin 20px 0 0 0
