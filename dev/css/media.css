@@ -24,9 +24,6 @@
         border-right: 16px solid transparent;
         border-bottom: 16px solid #3ba8c0;
     }
-    .w-contact {
-
-    }
     .w-contact .w-contact-title {
         display: none;
     }
@@ -92,6 +89,9 @@
         float: none;
         margin: 0 auto;
     }
+    #contact-form .form-legend {
+        font-size: 19px;
+    }
     #contact-form .form-group {
         padding-right: 10%;
         padding-left: 10%;
@@ -100,10 +100,25 @@
     #contact-form .form-group-right {
         float: none;
         width: 100%;
+        margin: 0 0 13px 0;
         text-align: left;
     }
     #contact-form .input-text {
         width: 100%;
+    }
+    #contact-form .btn-group .form-group-left {
+        float: left;
+    }
+    #contact-form .btn-group .form-group-right {
+        float: right;
+    }
+    #contact-form .btn-group .form-group-left,
+    #contact-form .btn-group .form-group-right {
+        width: 140px;
+    }
+    #contact-form #captcha-code,
+    #contact-form .captcha-img {
+        width: 150px;
     }
 
 
