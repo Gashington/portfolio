@@ -1,0 +1,395 @@
+/*Переменные настройки*/
+@font-face {
+  font-family: 'proxima';
+  src: url("../fonts/proximanovacond-semibold-webfont.eot");
+  src: url("../fonts/proximanovacond-semibold-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/proximanovacond-semibold-webfont.woff") format('woff'), url("../fonts/proximanovacond-semibold-webfont.ttf") format('truetype'), url("../fonts/proximanovacond-semibold-webfont.svg#proxima") format('svg');
+  font-weight: 'normal';
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format('embedded-opentype'), url("../fonts/icomoon.woff") format('woff'), url("../fonts/icomoon.ttf") format('truetype'), url("../fonts/icomoon.svg#icomoon") format('svg');
+  font-weight: 'normal';
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-upload:before {
+  content: "\e60b";
+}
+.icon-add:before {
+  content: "\e600";
+}
+.icon-courses:before {
+  content: "\e601";
+}
+.icon-education:before {
+  content: "\e60a";
+}
+.icon-fb:before {
+  content: "\e602";
+}
+.icon-gh:before {
+  content: "\e603";
+}
+.icon-mail:before {
+  content: "\e604";
+}
+.icon-phone:before {
+  content: "\e605";
+}
+.icon-skype:before {
+  content: "\e606";
+}
+.icon-tw:before {
+  content: "\e607";
+}
+.icon-vk:before {
+  content: "\e608";
+}
+.icon-work:before {
+  content: "\e609";
+}
+* {
+  box-sizing: border-box;
+}
+/*placeholder*/
+/*сброс стилей для списков*/
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*Скрытие текста*/
+.replace-txt {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.visible {
+  opacity: 1;
+}
+.invisible {
+  opacity: 0;
+}
+.s-icon {
+  display: block;
+  background: url("../img/bg/sprite.png") no-repeat;
+}
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+/*Футер к низу страницы*/
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -80px;
+}
+.footer-push {
+  height: 80px;
+}
+.footer {
+  height: 80px;
+}
+/*Основные стили*/
+body {
+  background: url("../img/bg/comppattern2.png");
+  font: normal 16px 'Fira Sans';
+}
+header {
+  padding: 28px 35px 25px;
+  background: #eff3f7 url("/img/bg/line-bg.png") no-repeat center bottom;
+}
+header .header-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+header .header-wrap:before,
+header .header-wrap:after {
+  content: " ";
+  display: table;
+}
+header .header-wrap:after {
+  clear: both;
+}
+.container {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 35px;
+}
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+.page {
+  padding: 39px 0;
+}
+.page:before,
+.page:after {
+  content: " ";
+  display: table;
+}
+.page:after {
+  clear: both;
+}
+.sidebar {
+  width: 100%;
+  max-width: 310px;
+  padding: 0 60px 0 0;
+}
+.sidebar .sidebar-item-1 {
+  margin: 0 0 23px 0;
+}
+.content {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 0 39px 0;
+}
+.title {
+  display: inline-block;
+  margin: 0 0 15px 0;
+  padding: 18px 23px 17px 20px;
+  border-bottom: 2px solid #3ba8c0;
+  color: #3ba8c0;
+  font-size: 27px;
+  font-weight: normal;
+}
+.content-item {
+  width: 100%;
+  margin: 24px auto;
+  padding: 0 0 13px 0;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #eff3f7;
+}
+.content-item:first-child {
+  margin: 0;
+}
+.footer {
+  background: #eff3f7 url("/img/bg/line-bg.png") no-repeat center top;
+  text-align: center;
+  line-height: 81px;
+}
+.footer .copyrgt {
+  color: #4a545d;
+  font-size: 13px;
+  font-weight: 300;
+}
+/*данные пользователя*/
+.user .user-avatar {
+  float: left;
+  width: 100%;
+  max-width: 245px;
+  padding: 0 21px;
+}
+.user .user-avatar img {
+  width: 200px;
+  height: 200px;
+}
+.user .user-info {
+  float: left;
+  width: 100%;
+  max-width: 404px;
+  padding: 7px 15px;
+}
+.user .user-info-item {
+  margin: 20px 0 0 0;
+  color: #4a545d;
+}
+.user .user-info-item:first-child {
+  margin: 0;
+}
+.user .user-info-title {
+  margin: 0 17px 0 0;
+  vertical-align: top;
+  font-size: 17px;
+  font-weight: 500;
+}
+.user .skills-list {
+  display: inline-block;
+  max-width: 196px;
+  word-spacing: 3px;
+}
+.user .skills-list .skills-item {
+  display: inline-block;
+  padding: 0 14px;
+  margin-bottom: 7px;
+  border-radius: 3px;
+  background: url("../img/bg/skill-bg.png");
+  color: #fff;
+  font: normal 14px/19px 'proxima';
+}
+/*места работы и учёбы*/
+.places-list {
+  padding: 21px 20px 8px 64px;
+}
+.places-list .places-item {
+  position: relative;
+  margin: 28px 0 0 0;
+  padding: 0 0 0 65px;
+  color: #4a545d;
+}
+.places-list .places-item:first-child {
+  margin: 0;
+}
+.places-list .places-item .icon {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  font-size: 34px;
+}
+.places-list .places-item .icon.icon-courses {
+  top: 3px;
+  left: 4px;
+}
+.places-list .place-name {
+  font-size: 17px;
+}
+.places-list .during {
+  font-size: 15px;
+  font-weight: 300;
+}
+/*Страница портфолио*/
+.portfolio-wrap {
+  height: 100%;
+  margin: 0 0 0 -30px;
+  padding: 18px 0 0 19px;
+  word-spacing: 0px;
+}
+.portfolio-wrap:before,
+.portfolio-wrap:after {
+  content: " ";
+  display: table;
+}
+.portfolio-wrap:after {
+  clear: both;
+}
+.portfolio-item {
+  display: inline-block;
+  width: 183px;
+  margin: 0 0 42px 30px;
+  vertical-align: top;
+  text-align: center;
+}
+.portfolio-item .with-hover {
+  position: relative;
+  height: 129px;
+  margin: 0 0 6px 0;
+  border: 2px solid #3ba8c0;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio-item .with-hover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+}
+.portfolio-item .with-hover .hover-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(1,108,164,0.75);
+  -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+  line-height: 144px;
+}
+.portfolio-item .with-hover .portfolio-name {
+  display: inline-block;
+  padding: 2px 3px;
+  opacity: 0;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  color: #fff;
+  font-size: 12px;
+  line-height: normal;
+  text-transform: lowercase;
+}
+.portfolio-item .with-hover:hover .hover-up {
+  opacity: 1;
+}
+.portfolio-item .with-hover:hover .portfolio-name {
+  opacity: 1;
+}
+.portfolio-item .with-hover:hover img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.portfolio-item .portfolio-url {
+  margin: 0 0 9px 0;
+}
+.portfolio-item .portfolio-url a {
+  color: #3ba8c0;
+  font-size: 13px;
+  font-weight: 300;
+  font-style: italic;
+  text-decoration: none;
+}
+.portfolio-item .portfolio-url a:hover {
+  color: #3b51c0;
+}
+.portfolio-item .portfolio-teaser {
+  padding: 0 5px;
+  color: #4a545d;
+  font-size: 15px;
+  font-weight: 300;
+}
+.add-project .portfolio-img {
+  position: relative;
+  border: none;
+}
+.add-project .caption {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  color: #3ba8c0;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: center;
+}
+.add-project .icon {
+  display: inline-block;
+  margin-bottom: 13px;
+  font-size: 32px;
+}

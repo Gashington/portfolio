@@ -1,0 +1,129 @@
+@media (max-width: 1050px) {
+    .header-item-2 {
+        padding: 0 91px 0 0;
+    }
+    .menu-button {
+        display: block;
+    }
+    .main-nav {
+        display: none;
+        top: 35px;
+        right: -70px;
+        width: 236px;
+
+        position: absolute;
+    }
+    .main-nav ul {
+        background: #fff;
+    }
+    .arrow-box {
+        width: 0;
+        height: 0;
+        margin: 0 0 -2px 137px;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-bottom: 16px solid #3ba8c0;
+    }
+    .w-contact .w-contact-title {
+        display: none;
+    }
+    .w-contact .w-contact-item {
+        float: left;
+        width: 33.3%;
+        height: 46px;
+        padding: 0;
+        line-height: 46px;
+        text-align: center;
+    }
+    .w-contact .w-contact-item a {
+        display: inline-block;
+        padding: 0 0 0 30px;
+    }
+    .w-contact .w-contact-item a .icon.icon-mail {
+        top: 16px;
+        left: 0;
+        font-size: 16px;
+    }
+    .w-contact .w-contact-item a .icon.icon-phone {
+        top: 11px;
+        left: 2px;
+        font-size: 21px;
+    }
+    .w-contact .w-contact-item a .icon.icon-skype {
+        top: 13px;
+        left: 2px;
+        font-size: 20px;
+    }
+
+    .content {
+        float: none;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .w-contact .w-contact-item {
+        float: none;
+        width: 100%;
+    }
+}
+@media (max-width: 721px) {
+    .page {
+        padding: 39px 0 0 0;
+    }
+    .social-list {
+        padding: 20px 0;
+    }
+}
+@media (max-width: 716px) {
+    .user .user-avatar {
+        float: none;
+        width: 100%;
+        max-width: 245px;
+        margin: 0 auto;
+        padding: 0 21px;
+    }
+    .user .user-info {
+        float: none;
+        margin: 0 auto;
+    }
+
+
+}
+@media (max-width: 470px) {
+    .title {
+        display: block;
+        border: none;
+        text-align: center;
+    }
+    .user-info-title,
+    .user-info-txt {
+        display: block;
+        text-align: center;
+    }
+    .user .skills-list {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+    .user .skills-list ul {
+        text-align: center;
+    }
+    .places-list {
+        padding: 10px;
+    }
+    .places-list .places-item {
+        margin: 28px 0 0 0;
+        padding: 0;
+        text-align: center;
+    }
+    .places-list .places-item .icon {
+        position: static;
+        display: block;
+        margin: 0 0 14px 0;
+        font-size: 34px;
+        text-align: center;
+    }
+}
