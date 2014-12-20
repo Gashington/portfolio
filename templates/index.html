@@ -29,7 +29,7 @@
 
     <!-- endbuild -->
 
-    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="{% static 'js/vendor/modernizr-2.8.3.min.js'%}"></script>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -63,6 +63,7 @@
         </div>
 
     </header>
+    {% block main %}
     <main class="page">
         <div class="container">
             <aside class="sidebar f-left">
@@ -159,6 +160,7 @@
         <div class="for-contacts"></div>
         <div class="for-social"></div>
     </main>
+    {% endblock %}
     <div class="footer-push"></div>
 </div>
 <footer class="footer">
@@ -169,16 +171,16 @@
 {% endblock %}
 
 <!-- build:jsConfig -->
-<script src="/js/vendor/jquery-1.11.1.js"></script>
-<script src="/js/vendor/fancybox.js"></script>
-<script src="/js/vendor/jquery.formstyler.js"></script>
-<script src="/js/vendor/jquery.validate.js"></script>
-<script src="/js/vendor/jquery.tooltipster.js"></script>
-<script src="/js/vendor/enquire.js"></script>
-<script src="/js/plugins.js"></script>
-<script src="/js/main.js"></script>
+<script src="{% static 'js/vendor/jquery-1.11.1.js' %}"></script>
+<script src="{% static 'js/vendor/fancybox.js'%}"></script>
+<script src="{% static 'js/vendor/jquery.formstyler.js'%}"></script>
+<script src="{% static 'js/vendor/jquery.validate.js'%}"></script>
+<script src="{% static 'js/vendor/jquery.tooltipster.js'%}"></script>
+<script src="{% static 'js/vendor/enquire.js'%}"></script>
+<script src="{% static 'js/plugins.js'%}"></script>
+<script src="{% static 'js/main.js'%}"></script>
 <!-- endbuild -->
-<script src="/js/vendor/respond.js"></script>
+<script src="{% static 'js/vendor/respond.js'%}"></script>
 
 </body>
 </html>

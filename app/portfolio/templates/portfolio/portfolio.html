@@ -1,0 +1,73 @@
+{% extends "index.html" %}
+{% block main %}
+    <main class="page">
+        <div class="container">
+            <aside class="sidebar f-left">
+                <div class="sidebar-item-1">
+                    <nav class="main-nav">
+                        <ul class="unstyled">
+                            <li ><a href="/">Обо мне</a></li>
+                            <li class="active"><a href="/portfolio.html">Мои работы</a></li>
+                            <li><a href="/contact.html">Связаться со мной</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sidebar-item-2">
+                    <div class="w-contact">
+                        <h3 class="w-contact-title lg-blue">Контакты</h3>
+
+                        <div class="w-contact-item h-blue">
+                            <a href="mailto://pochta@mail.ru"><i class="icon icon-mail"></i><span>pochta@mail.ru</span></a>
+                        </div>
+                        <div class="w-contact-item m-blue">
+                            <a href="tel://+79812342323"><i class="icon icon-phone"></i><span>+79812342323</span></a>
+                        </div>
+                        <div class="w-contact-item s-blue">
+                            <a href="skype:echo123?call"><i class="icon icon-skype"></i><span>nickname</span></a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section class="content f-left">
+                <div class="content-item">
+                    <h2 class="title">Мои работы</h2>
+
+                    <div class="portfolio-wrap">
+                        {% for project in projects %}
+                            <div class="portfolio-item">
+                            <div class="portfolio-img with-hover">
+                                <img src="{{ project.logo.url }}" alt="{{ project.name }}"/>
+                                <div class="hover-up">
+                                    <span class="portfolio-name">{{ project.name }}</span>
+                                </div>
+
+                            </div>
+                            <div class="portfolio-url"><a href="/">{{ project.siteUrl }}</a></div>
+                            <div class="portfolio-teaser">{{ project.teaser }}</div>
+                        </div>
+                        {% endfor %}
+
+
+                        <div class="portfolio-item add-project">
+                            <div class="portfolio-img" >
+                                <a class="fancybox" href="#add-project-form">
+                                    <img src="/img/add-project.png" alt=""/>
+                                    <div class="caption"><i class="icon icon-add"></i>
+
+                                        <div>Добавить проект</div>
+                                    </div>
+                                </a>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <div class="for-contacts"></div>
+        <div class="for-social"></div>
+    </main>
+   {% endblock %}
